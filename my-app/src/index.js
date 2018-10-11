@@ -7,12 +7,17 @@ import { Menu, Image, Grid, Container, Icon, List, Dropdown} from 'semantic-ui-r
 class TopMenu extends React.Component {
   render() {
     return (
+        <div className='tops'>
        <Container>
-        <Menu className = 'tops' white top relaxed borderless secondary>
-          <Menu.Item><Image className = 'image' src='http://murphyshawaii.com/media/2014/04/murphyshawaii.png' right inline /></Menu.Item>
+        <Menu white relaxed borderless secondary>
+          <Menu.Item><Image src='http://murphyshawaii.com/media/2014/04/murphyshawaii.png' right inline /></Menu.Item>
           <Menu.Menu position='right'>
             <Menu.Item>Home</Menu.Item>
-            <Menu.Item>About us</Menu.Item>
+            <Menu.Item><Dropdown item text="MEN">
+              <Dropdown.Menu>
+                <Dropdown.Item>My cart is currently empty.</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown></Menu.Item>
             <Menu.Item>St. Patrick's Day</Menu.Item>
             <Menu.Item>Menus</Menu.Item>
             <Menu.Item>Bar</Menu.Item>
@@ -20,6 +25,7 @@ class TopMenu extends React.Component {
           </Menu.Menu>
         </Menu>
         </Container>
+        </div>
      )
   }
 }
@@ -33,7 +39,7 @@ class FullWidthImage extends React.Component {
         <Grid.Column>
           <Image src='http://murphyshawaii.com/media/2014/04/murphyshawaiilogo.png' className='image2'/>
         </Grid.Column>
-    <Grid.Column middle className = 'text'>
+    <Grid.Column >
     <div middle textAllign = 'center'>
       <h3>A traditional downtown saloon and eatery located in the Honolulu Financial District, just one block off the waterfront, Murphy’s has been a haven for mariners, businessmen and locals since 1891.
       </h3>
@@ -50,8 +56,8 @@ class FullWidthImage extends React.Component {
 class FooterMenu extends React.Component {
   render() {
     return (
-
-          <Grid  className = 'g' divided='vertically'>
+        <div className='g'>
+          <Grid>
         <Grid.Row className ='pad' container columns={3} >
         <Grid.Column>Lunch<hr/><List>
           <List.Item>Monday – Friday: 11:00am – 2:30pm</List.Item>
@@ -67,9 +73,8 @@ class FooterMenu extends React.Component {
       <List.Item>Sunday: 5:00pm – 9:00pm</List.Item>
     </List></Grid.Column>
   </Grid.Row>
-
   </Grid>
-
+        </div>
     )
   }
 }
