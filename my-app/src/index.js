@@ -9,8 +9,7 @@ class TopMenu extends React.Component {
     return (
        <Container>
         <Menu className = 'tops' white top relaxed borderless secondary>
-          <Image verticalAllign ='tops' src='http://murphyshawaii.com/media/2014/04/murphyshawaii.png' size='small' />
-
+          <Menu.Item><Image className = 'image' src='http://murphyshawaii.com/media/2014/04/murphyshawaii.png' right inline /></Menu.Item>
           <Menu.Menu position='right'>
             <Menu.Item>Home</Menu.Item>
             <Menu.Item>About us</Menu.Item>
@@ -29,10 +28,10 @@ class FullWidthImage extends React.Component {
   render() {
     return (
         <div className = 'back'>
-        <Grid middle alligned container columns={2}>
-          <Grid.Row>
-        <Grid.Column className = 'image'>
-          <Image middle centered src='http://murphyshawaii.com/media/2014/04/murphyshawaiilogo.png'/>
+        <Grid verticalAlign='middle' container centered columns={2}>
+          <Grid.Row >
+        <Grid.Column>
+          <Image src='http://murphyshawaii.com/media/2014/04/murphyshawaiilogo.png' className='image2'/>
         </Grid.Column>
     <Grid.Column middle className = 'text'>
     <div middle textAllign = 'center'>
@@ -52,8 +51,8 @@ class FooterMenu extends React.Component {
   render() {
     return (
 
-          <Grid className='g' divided='vertically'>
-        <Grid.Row columns={3}>
+          <Grid  className = 'g' divided='vertically'>
+        <Grid.Row className ='pad' container columns={3} >
         <Grid.Column>Lunch<hr/><List>
           <List.Item>Monday – Friday: 11:00am – 2:30pm</List.Item>
           <List.Item>Saturday – Sunday: Not open for lunch</List.Item>
