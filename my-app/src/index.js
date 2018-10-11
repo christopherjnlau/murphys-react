@@ -13,11 +13,7 @@ class TopMenu extends React.Component {
           <Menu.Item><Image src='http://murphyshawaii.com/media/2014/04/murphyshawaii.png' right inline /></Menu.Item>
           <Menu.Menu position='right'>
             <Menu.Item>Home</Menu.Item>
-            <Menu.Item><Dropdown item text="MEN">
-              <Dropdown.Menu>
-                <Dropdown.Item>My cart is currently empty.</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown></Menu.Item>
+            <Menu.Item>About us</Menu.Item>
             <Menu.Item>St. Patrick's Day</Menu.Item>
             <Menu.Item>Menus</Menu.Item>
             <Menu.Item>Bar</Menu.Item>
